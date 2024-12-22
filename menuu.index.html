@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W Coffee - Menu</title>
+    <style>
+        body {
+            background-image: url('o.jpeg');
+            background-color: #cccccc;
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #222;
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            padding: -5px 0;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            margin: 0 auto;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .hero {
+            background: url('.jpeg') no-repeat center center/cover;
+            height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+        .menu-section {
+            padding: 50px 0;
+            background-color: #fff;
+            text-align: center;
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .menu-card {
+            background-color: #f4f4f4;
+            padding: 20px;
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .menu-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .menu-card h3 {
+            font-size: 20px;
+        }
+        .menu-card span {
+            font-size: 18px;
+            color: #f4c542;
+            font-weight: bold;
+        }
+        .menu-card button {
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        #cart {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        #cart-items {
+            list-style-type: none;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="container">
+        <div class="logo">
+            <img src="w1.jpeg" alt="W Coffee Logo" style="width: 150px;">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="About Us.html">About</a></li>
+                <li><a href="Contact Us.html">Contact</a></li>
+                <li><a href="order.html">Order</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Our Menu</h1>
+    </div>
+</section>
+
+<!-- Menu Sections -->
+<section class="menu-section" id="menu">
+    <h2>Hot Coffee</h2>
+    <div class="menu-item">
+        <!-- Coffee Card -->
+        <div class="menu-card">
+            <img src="22.jpeg" alt="Espresso Coffee">
+            <h3>Spence Latte</h3>
+            <span>1.800ر.ع</span>
+            <button onclick="addToCart('Spence Latte', 1.800)">Add to Cart</button>
+        </div>
+
+        <!-- Coffee Card -->
+        <div class="menu-card">
+            <img src="11.jpeg" alt="Latte Coffee">
+            <h3>Hot Americano</h3>
+            <span>1.000ر.ع</span>
+            <button onclick="addToCart('Hot Americano', 1.000)">Add to Cart</button>
+        </div>
+
+        <!-- Coffee Card -->
+        <div class="menu-card">
+            <img src="44.webp" alt="Croissant">
+            <h3>Hot Chocolate</h3>
+            <span>1.500ر.ع</span>
+            <button onclick="addToCart('Hot Chocolate', 1.500)">Add to Cart</button>
+        </div>
+
+        <!-- Coffee Card -->
+        <div class="menu-card">
+            <img src="33.webp" alt="Chocolate Muffin">
+            <h3>Cappuccino</h3>
+            <span>1.500ر.ع</span>
+            <button onclick="addToCart('Cappuccino', 1.500)">Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+<!-- Cold Coffee Section -->
+<section class="menu-section">
+    <h2>Cold Coffee</h2>
+    <div class="menu-item">
+        <!-- Coffee Card -->
+        <div class="menu-card">
+            <img src="v.jpeg" alt="Melik Chic Orio">
+            <h3>Melik Chic Orio</h3>
+            <span>1.800ر.ع</span>
+            <button onclick="addToCart('Melik Chic Orio', 1.800)">Add to Cart</button>
+        </div>
+
+        <!-- Coffee Card -->
+        <div class="menu-card">
+            <img src="c.jpeg" alt="Caramel Frappucino">
+            <h3>Cold Caramel Frappucino</h3>
+            <span>1.000ر.ع</span>
+            <button onclick="addToCart('Cold Caramel Frappucino', 1.000)">Add to Cart</button>
+        </div>
+
+        <!-- Coffee Card -->
+        <div class="menu-card">
+            <img src="w15.jpeg" alt="Cold Americano">
+            <h3>Cold Americano</h3>
+            <span>1.500ر.ع</span>
+            <button onclick="addToCart('Cold Americano', 1.500)">Add to Cart</button>
+        </div>
+
+        <!-- Coffee Card -->
+        <div class="menu-card">
+            <img src="w9.jpeg" alt="Cold Spanish Latte">
+            <h3>Cold Spanish Latte</h3>
+            <span>1.500ر.ع</span>
+            <button onclick="addToCart('Cold Spanish Latte', 1.500)">Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+<!-- Ice Cream Section -->
+<section class="menu-section">
+    <h2>Ice Cream</h2>
+    <div class="menu-item">
+        <!-- Ice Cream Card -->
+        <div class="menu-card">
+            <img src="a.jpeg" alt="Nutella Ice Cream">
+            <h3>Nutella Ice Cream</h3>
+            <span>1.800ر.ع</span>
+            <button onclick="addToCart('Nutella Ice Cream', 1.800)">Add to Cart</button>
+        </div>
+
+        <!-- Ice Cream Card -->
+        <div class="menu-card">
+            <img src="s.jpeg" alt="Chocolate Ice Cream">
+            <h3>Chocolate Ice Cream</h3>
+            <span>1.800ر.ع</span>
+            <button onclick="addToCart('Chocolate Ice Cream', 1.800)">Add to Cart</button>
+        </div>
+
+        <!-- Ice Cream Card -->
+        <div class="menu-card">
+            <img src="a.jpeg" alt="Coffee Ice Cream">
+            <h3>Coffee Ice Cream</h3>
+            <span>1.800ر.ع</span>
+            <button onclick="addToCart('Coffee Ice Cream', 1.800)">Add to Cart</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- Winter Box Section -->
+<section class="menu-section">
+    <h2>Winter Box</h2>
+    <div class="menu-item">
+        <div class="menu-card">
+            <img src="boxxx.jpg" alt="Winter Box">
+            <h3>Winter Box</h3>
+            <span>5.000ر.ع</span>
+            <button onclick="addToCart('Winter Box', 1.800)">Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+<!-- Cart Section -->
+<section id="cart">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <button onclick="checkout()">Checkout</button>
+</section>
+
+<script>
+    // Cart object to store items
+    let cart = [];
+
+    // Function to add items to cart
+    function addToCart(name, price) {
+        const existingItem = cart.find(item => item.name === name);
+        if (existingItem) {
+            existingItem.quantity += 1;
+        } else {
+            cart.push({ name: name, price: price, quantity: 1 });
+        }
+        updateCartDisplay();
+    }
+
+    // Function to update cart display
+    function updateCartDisplay() {
+        const cartItemsContainer = document.getElementById('cart-items');
+        cartItemsContainer.innerHTML = '';
+        cart.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = `${item.name} - ${item.quantity} x ${item.price}ر.ع`;
+            cartItemsContainer.appendChild(li);
+        });
+    }
+
+    // Function to handle checkout
+    function checkout() {
+        alert('Proceeding to checkout!');
+    }
+</script>
+
+</body>
+</html>
